@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelab Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">H</div>
+            <span>homelab<span class="logo-dot">.</span></span>
+        </div>
+
+        <div class="nav-section">
+            <p class="nav-label">OVERVIEW</p>
+            <a href="#" class="nav-item active">◫ Dashboard</a>
+            <a href="#" class="nav-item">▤ Servers</a>
+            <a href="#" class="nav-item">◈ Containers</a>
+            <a href="#" class="nav-item">▦ Virtual Machines</a>
+        </div>
+
+        <div class="nav-section">
+            <p class="nav-label">MANAGEMENT</p>
+            <a href="#" class="nav-item">⌘ Services</a>
+            <a href="#" class="nav-item">⇄ Network</a>
+            <a href="#" class="nav-item">▥ Storage</a>
+            <a href="#" class="nav-item">⚙ Settings</a>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="user-info">
+                <div class="avatar">BL</div>
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Homelab owner</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back. Here's what's happening in your lab.</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="system-status">
+                    <span class="status-dot"></span>
+                    All systems operational
+                </span>
+                <div class="date">17 November 2026</div>
+            </div>
+        </header>
+
+
+        <!-- SERVER STATUS -->
+        <section class="section">
+            <div class="section-heading">
+                <h2>System overview</h2>
+                <span class="subtle">Main server · Ubuntu Linux</span>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>CPU Usage</span>
+                        <span class="stat-icon">⌁</span>
+                    </div>
+                    <div class="stat-value">24<span>%</span></div>
+                    <div class="progress-bar">
+                        <div class="progress cpu"></div>
+                    </div>
+                    <small>8 cores · 3.4 GHz</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Memory Usage</span>
+                        <span class="stat-icon">▤</span>
+                    </div>
+                    <div class="stat-value">6.2<span> GB</span></div>
+                    <div class="progress-bar">
+                        <div class="progress memory"></div>
+                    </div>
+                    <small>6.2 GB / 16 GB</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Storage</span>
+                        <span class="stat-icon">▣</span>
+                    </div>
+                    <div class="stat-value">412<span> GB</span></div>
+                    <div class="progress-bar">
+                        <div class="progress storage"></div>
+                    </div>
+                    <small>412 GB / 1 TB</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Uptime</span>
+                        <span class="stat-icon">◷</span>
+                    </div>
+                    <div class="stat-value">14<span>d 6h</span></div>
+                    <div class="uptime-status">● Running normally</div>
+                    <small>Last boot: 03 Nov 2026</small>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SERVICES -->
+        <section class="section">
+            <div class="section-heading">
+                <h2>Services</h2>
+                <a href="#" class="view-all">View all →</a>
+            </div>
+
+            <div class="services-grid">
+
+                <a href="https://proxmox.local" class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon proxmox">P</div>
+                        <span class="online"><i></i> Online</span>
+                    </div>
+                    <h3>Proxmox</h3>
+                    <p>Virtualization management</p>
+                </a>
+
+                <a href="https://portainer.local" class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon portainer">P</div>
+                        <span class="online"><i></i> Online</span>
+                    </div>
+                    <h3>Portainer</h3>
+                    <p>Container management</p>
+                </a>
+
+                <a href="https://grafana.local" class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon grafana">G</div>
+                        <span class="online"><i></i> Online</span>
+                    </div>
+                    <h3>Grafana</h3>
+                    <p>Monitoring and analytics</p>
+                </a>
+
+                <a href="https://pihole.local" class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon pihole">π</div>
+                        <span class="online"><i></i> Online</span>
+                    </div>
+                    <h3>Pi-hole</h3>
+                    <p>Network-wide DNS filtering</p>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- BOTTOM SECTION -->
+        <section class="bottom-grid">
+
+            <div class="panel">
+                <div class="section-heading">
+                    <h2>Network information</h2>
+                    <span class="subtle">Local network</span>
+                </div>
+
+                <div class="network-row">
+                    <span>Hostname</span>
+                    <strong>homelab-server</strong>
+                </div>
+
+                <div class="network-row">
+                    <span>Local IP</span>
+                    <strong>192.168.1.100</strong>
+                </div>
+
+                <div class="network-row">
+                    <span>Gateway</span>
+                    <strong>192.168.1.1</strong>
+                </div>
+
+                <div class="network-row">
+                    <span>DNS</span>
+                    <strong>192.168.1.100</strong>
+                </div>
+
+                <div class="network-row">
+                    <span>Network status</span>
+                    <strong class="green-text">Connected</strong>
+                </div>
+            </div>
+
+
+            <div class="panel">
+                <div class="section-heading">
+                    <h2>Recent activity</h2>
+                    <span class="subtle">Latest events</span>
+                </div>
+
+                <div class="activity">
+                    <div class="activity-icon green-bg">✓</div>
+                    <div>
+                        <strong>Proxmox started</strong>
+                        <small>System service · 10:42 AM</small>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <div class="activity-icon blue-bg">↻</div>
+                    <div>
+                        <strong>Docker containers updated</strong>
+                        <small>Docker · 09:18 AM</small>
+                    </div>
+                </div>
+
+                <div class="activity">
+                    <div class="activity-icon orange-bg">!</div>
+                    <div>
+                        <strong>System backup completed</strong>
+                        <small>Storage · Yesterday</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            Homelab Dashboard <span>·</span> Self-hosted infrastructure
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

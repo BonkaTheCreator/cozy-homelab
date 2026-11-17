@@ -1,0 +1,22 @@
+# OS-filer
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Loggar
+*.log
+
+
+.env
+.env.local
+
+
+*.key
+*.pfx
+
+
+dist/
+build/
